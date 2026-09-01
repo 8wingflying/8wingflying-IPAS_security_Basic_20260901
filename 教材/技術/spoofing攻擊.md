@@ -39,5 +39,20 @@
 ## 解答
 | 標號 | 1 | 2 | 3| 4|
 | ---| ---| ---| ---|---|
-|答案| B | C | | A |
+|答案| B | C |B | A |
 
+#### 模擬試題 3
+- 解答：(B)
+- 解析：
+- (A) 為 ARP spoofing 的行為。
+- (B) 正確描述了 MAC spoofing 的核心概念：在軟體層面修改網卡宣稱的 MAC 位址以繞過過濾（如 MAC 白名單）。
+- (C) 為 IP spoofing 的行為。
+- (D) 為 DNS spoofing / Hijacking 的行為。
+
+#### 模擬試題 4
+- 解答：(A)
+- 解析：
+- (A) 正確描述了 DNS spoofing 的核心目的：透過假造的解析紀錄，進行惡意導向（如釣魚網站）。
+- (B) 為 SQL Injection (SQL 隱碼攻擊) 的行為。
+- (C) 竊聽同網段流量通常涉及 ARP spoofing 或 Port Mirroring，且修改實體位址（MAC spoofing）本身無法直接達成竊聽目的。
+- (D) 為針對 DNS 伺服器的阻斷服務攻擊 (DDoS)，而非欺騙 (Spoofing) 紀錄本身。
