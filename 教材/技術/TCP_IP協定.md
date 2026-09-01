@@ -31,7 +31,7 @@
 | **QUIC** (Quick UDP Internet Connections) | 基於 UDP、內建安全機制的可靠傳輸 | 由 Google 開發並成為 HTTP/3 的底層標準。<br>在 UDP 之上實作了可靠傳輸，並深度整合 TLS 1.3，達成 0-RTT 或 1-RTT 的極速連線，同時解決了 TCP 的隊頭阻塞 (Head-of-line blocking) 問題。 |
 | **SCTP** (Stream Control Transmission Protocol) | 訊息導向 (Message-oriented)、支援多重主機 (Multi-homing) | 允許在兩個端點之間建立多條網路路徑，網路備援與容錯能力極高，<br>廣泛應用於現代電信網路 (如 4G/5G 核心網的信令傳輸)。<br>**資安特性**：採用四次交握 (Four-way Handshake) 並引入 Cookie 機制，先天上對 SYN Flood 類型的資源耗盡攻擊具備較佳的防禦力。 |
 
-## 網路層常用協定 (Network Layer Protocols) 
+## 網路層常用協定 (Network Layer Protocols) ==> [路由協定](路由協定.md)
 
 以下是網路模型中網路層（Network Layer）常用協定的統整列表，包含其核心功能以及與資訊安全相關的通訊特性：
 
@@ -42,4 +42,4 @@
 | **ICMP** (Internet Control Message Protocol) | 負責傳報網路錯誤訊息與診斷網路連線狀態（如主機不可達或路由逾時）。<br>日常使用的 `ping` 與 `traceroute` 指令皆基於此協定。 | 常被攻擊者用來進行網路探測 (Ping Sweep) 盤點存活主機，或利用發送大量請求發動 ICMP Flood (如 Smurf Attack) 阻斷服務攻擊。 |
 | **IPsec** (Internet Protocol Security) | 負責為 IP 封包提供加密、資料完整性校驗與來源驗證的協定套件（主要包含 AH 與 ESP），為建立 Site-to-Site VPN 的核心技術。 | 運作於網路層，能透明地保護上層（傳輸層與應用層）的所有通訊流量，應用程式無須任何修改即可享有加密保護。 |
 | **ARP** (Address Resolution Protocol) | 負責將邏輯 IP 位址解析為實體的 MAC 位址，運作於網路層與資料鏈結層之間，是區域網路 (LAN) 內設備互連的基礎。 | 因設計上完全缺乏身分驗證機制，網域內的設備皆可盲目信任並接收 ARP 回應，極易遭受 ARP Spoofing (ARP 欺騙) 導致中間人攻擊 (MitM)。 |
-| **BGP / OSPF** (Routing Protocols) | 路由協定負責在路由器之間動態交換網路拓樸資訊，計算並決定資料封包從來源至目的地的最佳傳遞路徑。 | OSPF 多用於內部網路；<br>BGP 則是網際網路骨幹的核心。<br>BGP 若遭惡意發布錯誤路由 (BGP Hijacking)，將導致大規模連線癱瘓或流量遭竊聽。 |
+
